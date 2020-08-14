@@ -7,7 +7,7 @@ App = {
 	//load app
 	load: async () => {
 		console.log("app is loading")
-		await App.connectToBlockchainWithWeb3() //this member function can be named whatever
+		await App.connectToBlockchainWithWeb3() //member function, can be named whatever
 		await App.loadAccount()
 		await App.logContract()
 		await App.loadContract()
@@ -136,6 +136,19 @@ App = {
 			$newTaskTemplate.show()
 		}
 
+	},
+
+	createTask: async () => {
+		//show the loader 
+		App.setLoading(true)
+		//the input  is id=newTask
+		// .val() gets the value of whatever is in the input 
+		const content = $('#newTask').val()
+		//calling a smart contract function createTask()
+		await App.tdlVar.createTask(content)
+
+		// js lingo for 'refresh the page'
+		window.location.reload()
 	},
 
 	//from source material.

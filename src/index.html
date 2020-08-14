@@ -10,13 +10,6 @@
     <!-- Bootstrap -->
     <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
     <!-- styling written inside the head tag -->
     <style>
       main {
@@ -52,7 +45,7 @@
 
           <!-- to render the account in the navbar -->
           <small><a class="nav-link" href="#"><span id="account"></span>
-          <!-- end to render -->
+          <!-- end to render... -->
 
           </a></small>
         </li>
@@ -71,12 +64,14 @@
           <!-- end loader -->
 
           <div id="content">
+            
             <!-- create new todo item form -->
-            <!-- <form onSubmit="App.createTask(); return false;">
+            <!-- this onSubmit calls createTask() -->
+            <form onSubmit="App.createTask(); return false;">
               <input id="newTask" type="text" class="form-control" placeholder="Add task..." required>
               <input type="submit" hidden="">
-            </form> -->
-            <!-- end create new todo item from -->
+            </form>
+            <!-- end create new todo item form -->
 
             <!-- tasks list -->
             <ul id="taskList" class="list-unstyled">
